@@ -1,0 +1,41 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <title>Comics</title>  
+    <style>
+        .card {
+          box-shadow: 0 16px 16px 0 rgba(6, 95, 167, 0.2);
+          transition: 0.3s;
+          width: 40%;
+        }
+        
+        .card:hover {
+          box-shadow: 0 16px 16px 0 rgba(175, 212, 236, 0.2);
+        }
+        
+        .container {
+          padding: 2px 16px;
+        }
+    </style>
+</head>  
+<body>  
+  
+<h3>AVAILABLE BOOKS</h3>  
+{% for row in rows %}
+<div class="card">
+    <div class="container">
+        
+        <h4>{{row["bname"]}}</h4>  
+        <p>Price: {{row["price"]}}</p>  
+        <p>Author: {{row["authorname"]}}</p>  
+        <p>Language: {{row["language"]}}</p> 
+        <p>Category: {{row["category"]}}</p>  
+    </div>
+  </div>
+{% endfor %}  
+<br><br>  
+  
+<a href="/">Go back to home page</a>  
+  
+</body>  
+</html>  
